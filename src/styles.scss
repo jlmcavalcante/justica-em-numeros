@@ -1,1 +1,39 @@
-/* You can add global styles to this file, and also import other style files */
+// Tematização personalizada para Angular Material - https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+@include mat.core();
+
+// Defina as paletas para o seu tema usando as paletas do Material Design disponíveis em palette.scss
+// Paletas de cores disponíveis: https://material.io/design/color/
+$landing-page-evento-tjpi-primary: mat.define-palette(mat.$light-blue-palette, 900);
+$landing-page-evento-tjpi-accent: mat.define-palette(mat.$teal-palette , A200, A100, A400);
+$landing-page-evento-tjpi-warn: mat.define-palette(mat.$orange-palette);
+
+// Crie o objeto de tema. Um tema consiste em configurações para sistemas individuais
+// de tematização, como "cor" ou "tipografia".
+$landing-page-evento-tjpi-theme: mat.define-light-theme((
+  color: (
+    primary: $landing-page-evento-tjpi-primary,
+    accent: $landing-page-evento-tjpi-accent,
+    warn: $landing-page-evento-tjpi-warn,
+  ),
+  typography: mat.define-typography-config(),
+  density: 0
+));
+
+// Inclua estilos de tema para o core e para cada componente usado no seu aplicativo.
+@include mat.all-component-themes($landing-page-evento-tjpi-theme);
+
+/* Reset CSS Básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+  color: #161616;
+  background-color: #fdfdfd;
+}

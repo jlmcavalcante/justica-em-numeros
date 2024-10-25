@@ -1,0 +1,118 @@
+.component {
+  background-color: #315a78;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+img {
+  max-width: 1000px;
+}
+
+.rotateY {
+  transform: rotateX(180deg);
+}
+
+.rotateX {
+  transform: rotateY(180deg);
+}
+
+.globe {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.barbatana {
+  margin-left: 3rem;
+  width: 800px;
+}
+
+.left-container {
+  width: 50%;
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-container {
+  width: 50%;
+}
+
+.text-container {
+  color: white;
+  font-size: 1.5rem;
+}
+
+/* Estilo para o overlay de ícones e títulos */
+.image-wrapper {
+  position: relative;
+}
+
+/* Alinhamento de ícones e textos para a linha de cima (alinhamento na base) */
+.col .image-wrapper:nth-child(1) .overlay {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Alinhamento de ícones e textos para a linha do meio (alinhamento central) */
+.col .image-wrapper:nth-child(2) .overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Alinhamento de ícones e textos para a linha de baixo (alinhamento superior) */
+.col .image-wrapper:nth-child(3) .overlay {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Ajuste para o ícone */
+.overlay mat-icon {
+  font-size: 4rem;
+  width: 4rem;
+  height: 4rem;
+  display: block;
+}
+
+.overlay h3 {
+  font-size: 3.5rem;
+  margin-top: 0.5rem;
+}
+
+/* Corrigir o espelhamento de ícones e texto na terceira coluna */
+.fix-rotate {
+  transform: rotateX(180deg); /* Inverte a rotação da overlay para corrigir o texto */
+}
