@@ -1,0 +1,104 @@
+<div class="page">
+  <header class="header">
+    <img src="../../../assets/logos/unidata-removebg.png" alt="Logo Unidata" class="logo white-img">
+    <img src="../../../assets/logos/opalalab2.png" alt="Logo Opala" class="logo">
+  </header>
+
+  <main class="main-content">
+    <div class="left-column">
+      <div id="menu">
+        <div class="item1 item" (mouseenter)="changeText(0)" (mouseleave)="resetText()">
+          <div class="content">
+            <mat-icon>group</mat-icon>
+            <span>Estrutura de Pessoal</span>
+          </div>
+        </div>
+        <div class="item2 item" (mouseenter)="changeText(1)" (mouseleave)="resetText()">
+          <div class="content">
+            <mat-icon>trending_up</mat-icon>
+            <span>Produtividade</span>
+          </div>
+        </div>
+        <div class="item3 item" (mouseenter)="changeText(2)" (mouseleave)="resetText()">
+          <div class="content">
+            <mat-icon>grade</mat-icon>
+            <span>Prêmios de Qualidade</span>
+          </div>
+        </div>
+        <div class="item4 item" (mouseenter)="changeText(3)" (mouseleave)="resetText()">
+          <div class="content">
+            <mat-icon>attach_money</mat-icon>
+            <span>Orçamentos</span>
+          </div>
+        </div>
+        <div class="item5 item" (mouseenter)="changeText(4)" (mouseleave)="resetText()">
+          <div class="content">
+            <mat-icon>account_balance</mat-icon>
+            <span>Patrimônio</span>
+          </div>
+        </div>
+        <div class="item6 item" (mouseenter)="changeText(5)" (mouseleave)="resetText()">
+          <div class="content">
+            <mat-icon>assignment</mat-icon>
+            <span>Plano de Gestão</span>
+          </div>
+        </div>
+        <div class="item7 item" (mouseenter)="changeText(6)" (mouseleave)="resetText()">
+          <div class="content">
+            <mat-icon>gavel</mat-icon>
+            <span>Contratos e Licitações</span>
+          </div>
+        </div>
+        <div id="wrapper8">
+          <div class="item8 item" (mouseenter)="changeText(7)" (mouseleave)="resetText()" >
+            <div class="content">
+              <mat-icon>build</mat-icon>
+              <span>Obras</span>
+            </div>
+          </div>
+        </div>
+        <div id="center">
+          <img src="../../../assets/logos/unidata.jpeg" alt="">
+        </div>
+      </div>
+      <!-- <div id="border">
+      </div> -->
+    </div>
+
+    <div class="right-column">
+      <div class="upper-container">
+        <h2>{{ currentTitle }}</h2>
+        <p>{{ currentText }}</p>
+      </div>
+
+      <div class="lower-container">
+        <h2>Links úteis</h2>
+        <div class="buttons-container">
+          <a href="https://www.cnj.jus.br/pesquisas-judiciarias/justica-em-numeros/" target="_blank">
+            <div class="btn-icon-wrapper">
+              <mat-icon>description</mat-icon>
+            </div>
+            <div class="btn-name-wrapper">
+              <span> Relatórios Analíticos e Sumários Executivos</span>
+            </div>
+          </a>
+
+          <a href="https://www.cnj.jus.br/sistemas/datajud/" target="_blank">
+            <div class="btn-icon-wrapper">
+              <mat-icon class="material-symbols-outlined">database</mat-icon>
+            </div>
+            <div class="btn-name-wrapper">
+              <span>Base Nacional de Dados do Poder Judiciário</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <footer class="footer">
+    <p>&copy; 2024, Tribunal de Justiça do Piauí - Todos os direitos reservados.</p>
+    <p>Desenvolvido pelo Laboratório de Inovação do TJPI</p>
+  </footer>
+</div>

@@ -1,0 +1,63 @@
+/* Dispositivos móveis pequenos (smartphones) */
+@media (max-width: 480px) {
+
+}
+
+/* Tablets em modo retrato e smartphones maiores */
+@media (max-width: 768px) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 8.5rem);
+    overflow: scroll;
+    padding: 1rem 2rem 2rem 2rem;
+  }
+
+  .upper-container {
+
+    p {
+      line-height: 1.8;
+      font-size: 1.5vw !important;
+      text-align: justify;
+    }
+  }
+
+  .lower-container {
+
+    .btn-icon-wrapper {
+      mat-icon {
+        width: 3.5vw !important;
+        height: auto;
+        font-size: 3.5vw !important;
+      }
+    }
+
+    .btn-name-wrapper {
+      span {
+        color: #fafafa;
+        font-weight: 600;
+        font-size: 1.5vw !important;
+      }
+    }
+  }
+}
+
+/* Monitores desktop padrão */
+@media (max-width: 1200px) {
+  #menu {
+    transform: scale(0.8);
+  }
+
+  .left-column {
+    flex: 1;
+
+  }
+
+  .right-column {
+    flex: 2;
+
+    .upper-container, .lower-container {
+      width: 100% !important;
+    }
+  }
+}
