@@ -9,13 +9,13 @@ interface ItemText {
 }
 
 @Component({
-  selector: 'app-main',
+  selector: 'app-circular-menu-3',
   standalone: true,
   imports: [MatIconModule, MatButtonModule, CommonModule],
-  templateUrl: './main.component.html',
-  styleUrl: './main.component.scss'
+  templateUrl: './circular-menu-3.component.html',
+  styleUrl: './circular-menu-3.component.scss'
 })
-export class MainComponent implements OnInit{
+export class CircularMenu3Component implements OnInit {
   public isSmallScreen: boolean = false;
   currentTitle: string = 'Justiça em números';
   currentText: string =
@@ -35,32 +35,7 @@ export class MainComponent implements OnInit{
       title: 'Prêmios de Qualidade',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet convallis neque. Pellentesque nulla magna, feugiat at tempus suscipit, porttitor ut dolor. Donec eget nisl ut diam placerat egestas. Duis rutrum ipsum ex, in elementum nibh imperdiet vitae. Aliquam a sodales nunc, at egestas leo. Ut pharetra laoreet aliquet. Phasellus sit amet neque ut arcu aliquam pellentesque.',
-    },
-    {
-      title: 'Orçamentos',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet convallis neque. Pellentesque nulla magna, feugiat at tempus suscipit, porttitor ut dolor. Donec eget nisl ut diam placerat egestas. Duis rutrum ipsum ex, in elementum nibh imperdiet vitae. Aliquam a sodales nunc, at egestas leo. Ut pharetra laoreet aliquet. Phasellus sit amet neque ut arcu aliquam pellentesque.',
-    },
-    {
-      title: 'Patrimônio',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet convallis neque. Pellentesque nulla magna, feugiat at tempus suscipit, porttitor ut dolor. Donec eget nisl ut diam placerat egestas. Duis rutrum ipsum ex, in elementum nibh imperdiet vitae. Aliquam a sodales nunc, at egestas leo. Ut pharetra laoreet aliquet. Phasellus sit amet neque ut arcu aliquam pellentesque.',
-    },
-    {
-      title: 'Plano de Gestão',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet convallis neque. Pellentesque nulla magna, feugiat at tempus suscipit, porttitor ut dolor. Donec eget nisl ut diam placerat egestas. Duis rutrum ipsum ex, in elementum nibh imperdiet vitae. Aliquam a sodales nunc, at egestas leo. Ut pharetra laoreet aliquet. Phasellus sit amet neque ut arcu aliquam pellentesque.',
-    },
-    {
-      title: 'Contratos e Licitações',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet convallis neque. Pellentesque nulla magna, feugiat at tempus suscipit, porttitor ut dolor. Donec eget nisl ut diam placerat egestas. Duis rutrum ipsum ex, in elementum nibh imperdiet vitae. Aliquam a sodales nunc, at egestas leo. Ut pharetra laoreet aliquet. Phasellus sit amet neque ut arcu aliquam pellentesque.',
-    },
-    {
-      title: 'Obras',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet convallis neque. Pellentesque nulla magna, feugiat at tempus suscipit, porttitor ut dolor. Donec eget nisl ut diam placerat egestas. Duis rutrum ipsum ex, in elementum nibh imperdiet vitae. Aliquam a sodales nunc, at egestas leo. Ut pharetra laoreet aliquet. Phasellus sit amet neque ut arcu aliquam pellentesque.',
-    },
+    }
   ];
 
   constructor() {}

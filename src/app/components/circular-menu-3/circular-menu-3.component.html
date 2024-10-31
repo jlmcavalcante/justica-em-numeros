@@ -7,53 +7,48 @@
   <main class="main-content" *ngIf="!isSmallScreen">
     <div class="left-column">
       <div id="menu">
-        <div class="item1 item" (mouseenter)="changeText(0)" (mouseleave)="resetText()">
-          <div class="content">
-            <mat-icon>group</mat-icon>
-            <span>Estrutura de Pessoal</span>
-          </div>
-        </div>
-        <div class="item2 item" (mouseenter)="changeText(1)" (mouseleave)="resetText()">
-          <div class="content">
-            <mat-icon>trending_up</mat-icon>
-            <span>Produtividade</span>
-          </div>
-        </div>
-        <div class="item3 item" (mouseenter)="changeText(2)" (mouseleave)="resetText()">
-          <div class="content">
-            <mat-icon>grade</mat-icon>
-            <span>Prêmios de Qualidade</span>
-          </div>
-        </div>
-        <div class="item4 item" (mouseenter)="changeText(3)" (mouseleave)="resetText()">
-          <div class="content">
-            <mat-icon>attach_money</mat-icon>
-            <span>Orçamentos</span>
-          </div>
-        </div>
-        <div class="item5 item" (mouseenter)="changeText(4)" (mouseleave)="resetText()">
-          <div class="content">
-            <mat-icon>account_balance</mat-icon>
-            <span>Patrimônio</span>
-          </div>
-        </div>
-        <div class="item6 item" (mouseenter)="changeText(5)" (mouseleave)="resetText()">
-          <div class="content">
-            <mat-icon>assignment</mat-icon>
-            <span>Plano de Gestão</span>
-          </div>
-        </div>
-        <div class="item7 item" (mouseenter)="changeText(6)" (mouseleave)="resetText()">
-          <div class="content">
-            <mat-icon>gavel</mat-icon>
-            <span>Contratos e Licitações</span>
-          </div>
-        </div>
-        <div id="wrapper8">
-          <div class="item8 item" (mouseenter)="changeText(7)" (mouseleave)="resetText()">
+        <div class="sec1" (mouseenter)="changeText(0)" (mouseleave)="resetText()">
+          <div class="item1 item">
             <div class="content">
-              <mat-icon>build</mat-icon>
-              <span>Obras</span>
+              <mat-icon>group</mat-icon>
+              <span>Estrutura de Pessoal</span>
+            </div>
+          </div>
+          <div class="item2 item">
+            <div class="content">
+              <mat-icon>trending_up</mat-icon>
+              <span>Produtividade</span>
+            </div>
+          </div>
+        </div>
+        <div class="sec2" (mouseenter)="changeText(1)" (mouseleave)="resetText()">
+          <div class="item3 item">
+            <div class="content">
+              <mat-icon>grade</mat-icon>
+              <span>Prêmios de Qualidade</span>
+            </div>
+          </div>
+          <div class="item4 item">
+            <div class="content">
+              <mat-icon>attach_money</mat-icon>
+              <span>Orçamentos</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sec3" (mouseenter)="changeText(2)" (mouseleave)="resetText()">
+          <div class="item5 item">
+            <div class="content">
+              <mat-icon>account_balance</mat-icon>
+              <span>Patrimônio</span>
+            </div>
+          </div>
+          <div id="wrapper6">
+            <div class="item6 item">
+              <div class="content">
+                <mat-icon>build</mat-icon>
+                <span>Obras</span>
+              </div>
             </div>
           </div>
         </div>
