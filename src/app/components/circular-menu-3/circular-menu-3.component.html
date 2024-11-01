@@ -7,55 +7,62 @@
   <main class="main-content" *ngIf="!isSmallScreen">
     <div class="left-column">
       <div id="menu">
-        <div class="sec1" (mouseenter)="changeText(0)" (mouseleave)="resetText()">
-          <div class="item1 item">
-            <div class="content">
-              <mat-icon>group</mat-icon>
-              <span>Estrutura de Pessoal</span>
-            </div>
+
+        <div class="sec1 sec">
+          <div class="double-item" (mouseenter)="changeText(0)" (mouseleave)="resetText()">
+            <div class="item1 item"></div>
+            <div class="item2 item"></div>
           </div>
-          <div class="item2 item">
-            <div class="content">
-              <mat-icon>trending_up</mat-icon>
-              <span>Produtividade</span>
-            </div>
-          </div>
-        </div>
-        <div class="sec2" (mouseenter)="changeText(1)" (mouseleave)="resetText()">
-          <div class="item3 item">
-            <div class="content">
-              <mat-icon>grade</mat-icon>
-              <span>Prêmios de Qualidade</span>
-            </div>
-          </div>
-          <div class="item4 item">
-            <div class="content">
-              <mat-icon>attach_money</mat-icon>
-              <span>Orçamentos</span>
-            </div>
+
+          <div class="content">
+            <mat-icon>
+              build
+            </mat-icon>
+            <span>
+              Testando
+            </span>
           </div>
         </div>
 
-        <div class="sec3" (mouseenter)="changeText(2)" (mouseleave)="resetText()">
-          <div class="item5 item">
-            <div class="content">
-              <mat-icon>account_balance</mat-icon>
-              <span>Patrimônio</span>
-            </div>
+        <div class="sec2 sec">
+          <div class="double-item" (mouseenter)="changeText(1)" (mouseleave)="resetText()">
+            <div class="item3 item"></div>
+            <div class="item4 item"></div>
           </div>
-          <div id="wrapper6">
-            <div class="item6 item">
-              <div class="content">
-                <mat-icon>build</mat-icon>
-                <span>Obras</span>
-              </div>
-            </div>
+
+          <div class="content">
+            <mat-icon>
+              build
+            </mat-icon>
+            <span>
+              Testando
+            </span>
           </div>
         </div>
+
+        <div class="sec3 sec">
+          <div class="double-item" (mouseenter)="changeText(2)" (mouseleave)="resetText()">
+            <div class="item5 item"></div>
+            <div id="wrapper6">
+              <div class="item6 item"></div>
+            </div>
+          </div>
+
+          <div class="content">
+            <mat-icon>
+              build
+            </mat-icon>
+            <span>
+              Testando
+            </span>
+          </div>
+        </div>
+
         <div id="center">
           <img src="../../../assets/logos/unidata.jpeg" alt="">
         </div>
       </div>
+
       <div id="border"></div>
     </div>
 
