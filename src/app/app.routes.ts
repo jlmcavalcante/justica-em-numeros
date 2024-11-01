@@ -5,6 +5,6 @@ import { CircularMenu3Component } from './components/circular-menu-3/circular-me
 export const routes: Routes = [
   { path: 'administrativo', component: MainComponent },
   { path: 'judicial', component: CircularMenu3Component },
-  { path: '', redirectTo: '/judicial', pathMatch: 'full' },
-  { path: '**', redirectTo: '/judicial' },
+  { path: '', redirectTo: '/administrativo', pathMatch: 'full' },
+  { path: '**', redirectTo: '/administrativo' },
 ];
