@@ -42,6 +42,8 @@
     align-items: center;
 
     #menu {
+      transform: rotate(30deg);
+      z-index: 10;
       background: #aaa;
       position: relative;
       width: 600px;
@@ -63,6 +65,7 @@
         background: #ffffff;
         background: linear-gradient(top, #eee, #aaa);
         border-radius: 1rem;
+        transform: rotate(-30deg);
 
         img {
           width: 16rem;
@@ -86,45 +89,39 @@
       .double-item {
         position: relative;
         z-index: 1;
-
-        &:hover {
-
-          .item {
-            background-color: #ffffff;
-            cursor: pointer;
-          }
-        }
       }
 
       .sec1 {
         .content {
           left: 50px;
           top: 280px;
-
-          &:hover {
-
-          }
+          transform: rotate(-30deg);
         }
-
       }
+
+      .sec1:hover {
+        cursor: pointer;
+      }
+      .double-item:hover {
+        cursor: pointer;
+      }
+      .content:hover {
+        cursor: pointer;
+      }
+
+
       .sec2 {
         .content {
           left: 350px;
           top: 420px;
-
-          &:hover {
-
-          }
+          transform: rotate(-30deg);
         }
       }
       .sec3 {
         .content {
           left: 350px;
           top: 80px;
-
-          &:hover {
-
-          }
+          transform: rotate(-30deg);
         }
       }
 
@@ -198,50 +195,6 @@
         transform: rotate(-30deg);
         -moz-transform: rotate(-30deg);
         -webkit-transform: rotate(-30deg);
-      }
-
-      // Content positioning for items
-      .item1 .content {
-        left: 60px;
-        top: 75px;
-        transform: rotate(-60deg);
-        -moz-transform: rotate(-60deg);
-        -webkit-transform: rotate(-60deg);
-      }
-      .item2 .content {
-        left: 60px;
-        top: 75px;
-        transform: rotate(-120deg);
-        -moz-transform: rotate(-120deg);
-        -webkit-transform: rotate(-120deg);
-      }
-      .item3 .content {
-        left: 60px;
-        top: 75px;
-        transform: rotate(-180deg);
-        -moz-transform: rotate(-180deg);
-        -webkit-transform: rotate(-180deg);
-      }
-      .item4 .content {
-        left: 60px;
-        top: 75px;
-        transform: rotate(-240deg);
-        -moz-transform: rotate(-240deg);
-        -webkit-transform: rotate(-240deg);
-      }
-      .item5 .content {
-        left: 60px;
-        top: 75px;
-        transform: rotate(-300deg);
-        -moz-transform: rotate(-300deg);
-        -webkit-transform: rotate(-300deg);
-      }
-      .item6 .content {
-        left: 120px;
-        top: -10px;
-        transform: rotate(30deg);
-        -moz-transform: rotate(30deg);
-        -webkit-transform: rotate(30deg);
       }
 
       // Wrapper for item 8
@@ -361,11 +314,11 @@
 
       h2 {
         font-size: 2.5vh;
-        margin-bottom: 2.5vh;
+        margin-bottom: 1.5vh;
       }
 
       p {
-        line-height: 1.8;
+        line-height: 1.6;
         font-size: 0.9vw;
         text-align: justify;
       }
