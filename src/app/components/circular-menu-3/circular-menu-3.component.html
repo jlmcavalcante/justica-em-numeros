@@ -7,13 +7,11 @@
   <main class="main-content" *ngIf="!isSmallScreen">
     <div class="left-column">
       <div id="menu">
-
         <div class="sec1 sec" (mouseenter)="changeText(0)" (mouseleave)="resetText()">
           <div class="double-item">
             <div class="item1 item"></div>
             <div class="item2 item"></div>
           </div>
-
           <div class="content">
             <mat-icon>
               build
@@ -23,13 +21,11 @@
             </span>
           </div>
         </div>
-
         <div class="sec2 sec" (mouseenter)="changeText(1)" (mouseleave)="resetText()">
           <div class="double-item">
             <div class="item3 item"></div>
             <div class="item4 item"></div>
           </div>
-
           <div class="content">
             <mat-icon>
               build
@@ -39,7 +35,6 @@
             </span>
           </div>
         </div>
-
         <div class="sec3 sec" (mouseenter)="changeText(2)" (mouseleave)="resetText()">
           <div class="double-item">
             <div class="item5 item"></div>
@@ -47,7 +42,6 @@
               <div class="item6 item"></div>
             </div>
           </div>
-
           <div class="content">
             <mat-icon>
               build
@@ -57,41 +51,42 @@
             </span>
           </div>
         </div>
-
         <div id="center">
           <img src="../../../assets/logos/unidata.jpeg" alt="">
         </div>
       </div>
-
       <div id="border"></div>
     </div>
-
     <div class="right-column">
       <div class="upper-container">
         <h2>{{ currentTitle }}</h2>
         <p>{{ currentText }}</p>
       </div>
-
       <div class="lower-container">
-        <h2>Links úteis</h2>
+        <h2>Nome do Container</h2>
         <div class="buttons-container">
-          <a href="https://www.cnj.jus.br/pesquisas-judiciarias/justica-em-numeros/" target="_blank">
-            <div class="btn-icon-wrapper">
-              <mat-icon>description</mat-icon>
-            </div>
-            <div class="btn-name-wrapper">
-              <span> Relatórios Analíticos e Sumários Executivos</span>
-            </div>
-          </a>
+          <mat-form-field>
+            <mat-label>Escolha a Instância</mat-label>
+            <mat-select [(value)]="selectedInstancia" (selectionChange)="onInstanciaChange($event.value)">
+              <mat-option [value]="null">-</mat-option>
+              <mat-divider style="width: 11rem;"></mat-divider>
+              <mat-option *ngFor="let instancia of uniqueInstancias" [value]="instancia">
+                {{ instancia }}
+                <mat-divider style="width: 11rem; margin-top: .5rem;"></mat-divider>
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
 
-          <a href="https://www.cnj.jus.br/sistemas/datajud/" target="_blank">
-            <div class="btn-icon-wrapper">
-              <mat-icon class="material-symbols-outlined">database</mat-icon>
-            </div>
-            <div class="btn-name-wrapper">
-              <span>Base Nacional de Dados do Poder Judiciário</span>
-            </div>
-          </a>
+          <mat-form-field>
+            <mat-label>Orgão Julgador {{filteredOrgaos.length}}</mat-label>
+            <input type="text" matInput [matAutocomplete]="auto" [(ngModel)]="selectedOrgao" (input)="filterOrgaos()">
+            <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onOrgaoChange($event.option.value)">
+              <mat-option [value]="orgao.ORG_JULGADOR" *ngFor="let orgao of filteredOrgaos">
+                {{ orgao.ORG_JULGADOR }}
+                <mat-divider style="width: 11rem; margin-top: .5rem;"></mat-divider>
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
         </div>
       </div>
     </div>
