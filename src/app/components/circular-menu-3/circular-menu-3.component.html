@@ -69,10 +69,9 @@
             <mat-label>Escolha a Instância</mat-label>
             <mat-select [(value)]="selectedInstancia" (selectionChange)="onInstanciaChange($event.value)">
               <mat-option [value]="null">-</mat-option>
-              <mat-divider style="width: 11rem;"></mat-divider>
               <mat-option *ngFor="let instancia of uniqueInstancias" [value]="instancia">
-                {{ instancia }}
                 <mat-divider style="width: 11rem; margin-top: .5rem;"></mat-divider>
+                {{ instancia }}
               </mat-option>
             </mat-select>
           </mat-form-field>
@@ -82,8 +81,8 @@
             <input type="text" matInput [matAutocomplete]="auto" [(ngModel)]="selectedOrgao" (input)="filterOrgaos()">
             <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onOrgaoChange($event.option.value)">
               <mat-option [value]="orgao.ORG_JULGADOR" *ngFor="let orgao of filteredOrgaos">
-                {{ orgao.ORG_JULGADOR }}
                 <mat-divider style="width: 11rem; margin-top: .5rem;"></mat-divider>
+                {{ orgao.ORG_JULGADOR }}
               </mat-option>
             </mat-autocomplete>
           </mat-form-field>

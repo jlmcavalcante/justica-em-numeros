@@ -71,31 +71,22 @@ export class CircularMenu3Component implements OnInit {
 
   private extractUniqueInstancias(): void {
     this.uniqueInstancias = Array.from(new Set(this.orgaos.map(orgao => orgao.INSTANCIA)));
-    console.log("Instâncias únicas:", this.uniqueInstancias);
   }
 
-  // Método chamado ao selecionar uma instância
   onInstanciaChange(instancia: string | null): void {
     this.selectedInstancia = instancia;
-    console.log('Instância alterada para:', this.selectedInstancia);
-    // Filtra os órgãos com base na instância selecionada ou exibe todos se `instancia` for nulo
     this.filteredOrgaos = instancia
       ? this.orgaos.filter((orgao) => orgao.INSTANCIA === instancia)
       : this.orgaos;
-    this.selectedOrgao = null; // Limpa a seleção do autocomplete
+    this.selectedOrgao = null;
   }
 
-  // Filtragem para o autocomplete de "Orgão Julgador"
   filterOrgaos(): void {
-    // Se o campo de órgão julgador está vazio, aplique a filtragem pela instância selecionada
     if (!this.selectedOrgao) {
       this.filteredOrgaos = this.selectedInstancia
-        ? this.orgaos.filter(
-            (orgao) => orgao.INSTANCIA === this.selectedInstancia
-          )
+        ? this.orgaos.filter((orgao) => orgao.INSTANCIA === this.selectedInstancia)
         : this.orgaos;
     } else {
-      // Caso contrário, aplique a filtragem pelo valor digitado no campo de órgão julgador
       const filterValue = this.selectedOrgao.toLowerCase();
       this.filteredOrgaos = this.orgaos.filter((orgao) =>
         orgao.ORG_JULGADOR.toLowerCase().includes(filterValue)
@@ -103,22 +94,15 @@ export class CircularMenu3Component implements OnInit {
     }
   }
 
-  // Método chamado ao selecionar um órgão
   onOrgaoChange(orgaoJulgador: string | null): void {
     this.selectedOrgao = orgaoJulgador;
-    console.log('Órgão selecionado:', orgaoJulgador);
 
-    // Se a instância não estiver selecionada, define-a automaticamente com base no órgão selecionado
     if (!this.selectedInstancia && orgaoJulgador) {
       const orgaoSelecionado = this.orgaos.find(
         (orgao) => orgao.ORG_JULGADOR === orgaoJulgador
       );
       if (orgaoSelecionado) {
         this.selectedInstancia = orgaoSelecionado.INSTANCIA;
-        console.log(
-          `Instância selecionada automaticamente: ${this.selectedInstancia}`
-        );
-        // Aplica a filtragem para exibir apenas órgãos da instância selecionada
         this.filteredOrgaos = this.orgaos.filter(
           (orgao) => orgao.INSTANCIA === this.selectedInstancia
         );
