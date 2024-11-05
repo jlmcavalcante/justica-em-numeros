@@ -44,7 +44,7 @@
     #menu {
       transform: rotate(30deg);
       z-index: 10;
-      background: #aaa;
+      background: #357abd;
       position: relative;
       width: 600px;
       height: 600px;
@@ -58,9 +58,9 @@
         justify-content: center;
         position: absolute;
         left: 160px;
-        top: 240px;
+        top: 250px;
         width: 18rem;
-        height: 7rem;
+        height: 6rem;
         z-index: 10;
         background: #ffffff;
         background: linear-gradient(top, #eee, #aaa);
@@ -93,8 +93,8 @@
 
       .sec1 {
         .content {
-          left: 50px;
-          top: 280px;
+          left: 300px;
+          top: 60px;
           transform: rotate(-30deg);
         }
       }
@@ -112,15 +112,16 @@
 
       .sec2 {
         .content {
-          left: 350px;
-          top: 420px;
+          left: 300px;
+          top: 400px;
           transform: rotate(-30deg);
         }
       }
+
       .sec3 {
         .content {
-          left: 350px;
-          top: 80px;
+          left: 5px;
+          top: 230px;
           transform: rotate(-30deg);
         }
       }
@@ -132,6 +133,8 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        width: 30%;
+        text-align: center;
 
         mat-icon {
           transition: transform 0.5s ease;
@@ -149,63 +152,50 @@
         }
       }
 
-      // Item styles
       .item1 {
-        background-color: #4a90e2;
+        background-color: #357abd;
         z-index: 1;
-        transform: rotate(60deg);
-        -moz-transform: rotate(60deg);
-        -webkit-transform: rotate(60deg);
+        transform: rotate(60deg) skew(30deg);
+        -moz-transform: rotate(60deg) skew(30deg);
+        -webkit-transform: rotate(60deg) skew(30deg);
         border-bottom: 2px solid #fff;
       }
       .item2 {
-        background-color: #4a90e2;
+        background-color: #357abd;
         z-index: 2;
-        transform: rotate(120deg);
-        -moz-transform: rotate(120deg);
-        -webkit-transform: rotate(120deg);
+        transform: rotate(120deg) skew(30deg);
+        -moz-transform: rotate(120deg) skew(30deg);
+        -webkit-transform: rotate(120deg) skew(30deg);
       }
       .item3 {
         background-color: #357abd;
         z-index: 3;
-        transform: rotate(180deg);
-        -moz-transform: rotate(180deg);
-        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg) skew(30deg);
+        -moz-transform: rotate(180deg) skew(30deg);
+        -webkit-transform: rotate(180deg) skew(30deg);
         border-bottom: 2px solid #fff;
-
       }
       .item4 {
         background-color: #357abd;
         z-index: 4;
-        transform: rotate(240deg);
-        -moz-transform: rotate(240deg);
-        -webkit-transform: rotate(240deg);
+        transform: rotate(240deg) skew(30deg);
+        -moz-transform: rotate(240deg) skew(30deg);
+        -webkit-transform: rotate(240deg) skew(30deg);
       }
       .item5 {
-        background-color: #4076ac;
+        background-color: #357abd;
         z-index: 5;
-        transform: rotate(300deg);
-        -moz-transform: rotate(300deg);
-        -webkit-transform: rotate(300deg);
+        transform: rotate(300deg) skew(30deg);
+        -moz-transform: rotate(300deg) skew(30deg);
+        -webkit-transform: rotate(300deg) skew(30deg);
         border-bottom: 2px solid #fff;
       }
       .item6 {
-        background-color: #4076ac;
+        background-color: #357abd;
         z-index: 6;
-        transform: rotate(-30deg);
-        -moz-transform: rotate(-30deg);
-        -webkit-transform: rotate(-30deg);
-      }
-
-      // Wrapper for item 8
-      #wrapper6 {
-        position: absolute;
-        width: 300px;
-        height: 300px;
-        overflow: hidden;
-        transform-origin: 100% 100%;
-        -moz-transform-origin: 100% 100%;
-        -webkit-transform-origin: 100% 100%;
+        transform: rotate(360deg) skew(30deg);
+        -moz-transform: rotate(360deg) skew(30deg);
+        -webkit-transform: rotate(360deg) skew(30deg);
       }
     }
 
@@ -357,6 +347,47 @@ mat-icon {
   height: auto;
   font-size: 1.8vw;
   margin-bottom: 0.5rem;
+}
+
+
+
+/* Efeito hover específico para cada seção */
+
+.sec1:hover .item1, .sec1:hover .item2 {
+  background-color: #ffffff !important;
+}
+.sec1:hover .content mat-icon, .sec1:hover .content span,
+.sec1:hover .content mat-icon, .sec1:hover .content span {
+  color: #357abd !important;
+}
+
+.sec2:hover .item3, .sec2:hover .item4 {
+  background-color: #ffffff !important;
+}
+.sec2:hover .content mat-icon, .sec2:hover .content span,
+.sec2:hover .content mat-icon, .sec2:hover .content span {
+  color: #357abd !important;
+}
+
+.sec3:hover .item5, .sec3:hover .item6 {
+  background-color: #ffffff !important;
+}
+.sec3:hover .content mat-icon, .sec3:hover .content span,
+.sec3:hover .content mat-icon, .sec3:hover .content span {
+  color: #357abd !important;
+}
+
+
+
+.sec1:hover > #menu {
+  background: #ffffff !important;
+}
+.sec2:hover > #menu {
+  background: #ffffff !important;
+}
+
+.sec3:hover ~ #menu {
+  background: #ffffff !important;
 }
 
 @import "../../styles/responsive.component.scss";

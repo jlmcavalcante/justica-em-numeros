@@ -7,47 +7,39 @@
   <main class="main-content" *ngIf="!isSmallScreen">
     <div class="left-column">
       <div id="menu">
-        <div class="sec1 sec" (mouseenter)="changeText(0)" (mouseleave)="resetText()">
+        <div class="sec1 sec">
           <div class="double-item">
-            <div class="item1 item"></div>
-            <div class="item2 item"></div>
+            <div class="item1 item" (mouseenter)="changeText(0)" (mouseleave)="resetText()"></div>
+            <div class="item2 item" (mouseenter)="changeText(0)" (mouseleave)="resetText()"></div>
           </div>
-          <div class="content">
-            <mat-icon>
-              build
-            </mat-icon>
+          <div class="content" (mouseenter)="changeText(0)" (mouseleave)="resetText()">
+            <mat-icon>trending_up</mat-icon>
             <span>
-              Testando
+              Metas e Indicadores
             </span>
           </div>
         </div>
-        <div class="sec2 sec" (mouseenter)="changeText(1)" (mouseleave)="resetText()">
+        <div class="sec2 sec">
           <div class="double-item">
-            <div class="item3 item"></div>
-            <div class="item4 item"></div>
+            <div class="item3 item" (mouseenter)="changeText(1)" (mouseleave)="resetText()"></div>
+            <div class="item4 item" (mouseenter)="changeText(1)" (mouseleave)="resetText()"></div>
           </div>
-          <div class="content">
-            <mat-icon>
-              build
-            </mat-icon>
+          <div class="content" (mouseenter)="changeText(1)" (mouseleave)="resetText()">
+            <mat-icon>settings</mat-icon>
             <span>
-              Testando
+              Gestão Processual
             </span>
           </div>
         </div>
-        <div class="sec3 sec" (mouseenter)="changeText(2)" (mouseleave)="resetText()">
+        <div class="sec3 sec">
           <div class="double-item">
-            <div class="item5 item"></div>
-            <div id="wrapper6">
-              <div class="item6 item"></div>
-            </div>
+            <div class="item5 item" (mouseenter)="changeText(2)" (mouseleave)="resetText()"></div>
+            <div class="item6 item" (mouseenter)="changeText(2)" (mouseleave)="resetText()"></div>
           </div>
-          <div class="content">
-            <mat-icon>
-              build
-            </mat-icon>
+          <div class="content" (mouseenter)="changeText(2)" (mouseleave)="resetText()">
+            <mat-icon>people</mat-icon>
             <span>
-              Testando
+              Gestão de Pessoas
             </span>
           </div>
         </div>
@@ -86,6 +78,9 @@
               </mat-option>
             </mat-autocomplete>
           </mat-form-field>
+
+          <button mat-raised-button color="primary" (click)="saveSelections()">Ok</button>
+          <button mat-raised-button color="warn" (click)="clearSelections()">Limpar</button>
         </div>
       </div>
     </div>
