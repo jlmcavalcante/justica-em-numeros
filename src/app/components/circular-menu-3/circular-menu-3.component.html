@@ -57,32 +57,38 @@
 
       <div class="lower-container">
         <h2>Filtragem</h2>
-        <div class="select-container">
-          <mat-form-field appearance="outline">
-            <mat-label>Escolha a Instância</mat-label>
-            <mat-select [(value)]="selectedInstancia" (selectionChange)="onInstanciaChange($event.value)">
-              <mat-option [value]="null">-</mat-option>
-              <mat-option *ngFor="let instancia of uniqueInstancias" [value]="instancia">
-                <mat-divider style="width: 11rem; margin-top: .5rem;"></mat-divider>
-                {{ instancia }}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
+        <div class="filter-container">
+          <div class="select-container">
+            <mat-form-field appearance="outline">
+              <mat-label>Instância</mat-label>
+              <mat-select [(value)]="selectedInstancia" (selectionChange)="onInstanciaChange($event.value)">
+                <mat-option [value]="null">*</mat-option>
+                <mat-option *ngFor="let instancia of uniqueInstancias" [value]="instancia">
+                  {{ instancia }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
 
-          <mat-form-field appearance="outline">
-            <mat-label>Orgão Julgador {{filteredOrgaos.length}}</mat-label>
-            <input type="text" matInput [matAutocomplete]="auto" [(ngModel)]="selectedOrgao" (input)="filterOrgaos()">
-            <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onOrgaoChange($event.option.value)">
-              <mat-option [value]="orgao.ORG_JULGADOR" *ngFor="let orgao of filteredOrgaos">
-                <mat-divider style="width: 11rem; margin-top: .5rem;"></mat-divider>
-                {{ orgao.ORG_JULGADOR }}
-              </mat-option>
-            </mat-autocomplete>
-          </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Orgão Julgador ({{filteredOrgaos.length}})</mat-label>
+              <input type="text" matInput [matAutocomplete]="auto" [(ngModel)]="selectedOrgao" (input)="filterOrgaos()">
+              <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onOrgaoChange($event.option.value)">
+                <mat-option [value]="orgao.ORG_JULGADOR" *ngFor="let orgao of filteredOrgaos">
+                  {{ orgao.ORG_JULGADOR }}
+                </mat-option>
+              </mat-autocomplete>
+            </mat-form-field>
+          </div>
 
-          <button mat-raised-button color="primary" (click)="saveSelections()">Ok</button>
-          <button mat-raised-button color="warn" (click)="clearSelections()">Limpar</button>
+          <div class="btn-container">
+            <button mat-raised-button color="warn" (click)="clearSelections()">Limpar</button>
+            <button mat-raised-button color="primary" (click)="saveSelections()">Ok</button>
+          </div>
         </div>
+      </div>
+
+      <div class="credits">
+        <button mat-button color="primary" (click)="openCreditsDialog()">Abrir os creditos</button>
       </div>
     </div>
   </main>

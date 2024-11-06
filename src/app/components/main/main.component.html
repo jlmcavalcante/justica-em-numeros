@@ -71,26 +71,39 @@
       </div>
 
       <div class="lower-container">
-        <h2>Links úteis</h2>
-        <div class="buttons-container">
-          <a href="https://www.cnj.jus.br/pesquisas-judiciarias/justica-em-numeros/" target="_blank">
-            <div class="btn-icon-wrapper">
-              <mat-icon>description</mat-icon>
-            </div>
-            <div class="btn-name-wrapper">
-              <span> Relatórios Analíticos e Sumários Executivos</span>
-            </div>
-          </a>
+        <h2>Filtragem</h2>
+        <div class="filter-container">
+          <div class="select-container">
+            <mat-form-field appearance="outline">
+              <mat-label>Instância</mat-label>
+              <mat-select [(value)]="selectedInstancia" (selectionChange)="onInstanciaChange($event.value)">
+                <mat-option [value]="null">*</mat-option>
+                <mat-option *ngFor="let instancia of uniqueInstancias" [value]="instancia">
+                  {{ instancia }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
 
-          <a href="https://www.cnj.jus.br/sistemas/datajud/" target="_blank">
-            <div class="btn-icon-wrapper">
-              <mat-icon class="material-symbols-outlined">database</mat-icon>
-            </div>
-            <div class="btn-name-wrapper">
-              <span>Base Nacional de Dados do Poder Judiciário</span>
-            </div>
-          </a>
+            <mat-form-field appearance="outline">
+              <mat-label>Orgão Julgador ({{filteredOrgaos.length}})</mat-label>
+              <input type="text" matInput [matAutocomplete]="auto" [(ngModel)]="selectedOrgao" (input)="filterOrgaos()">
+              <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onOrgaoChange($event.option.value)">
+                <mat-option [value]="orgao.ORG_JULGADOR" *ngFor="let orgao of filteredOrgaos">
+                  {{ orgao.ORG_JULGADOR }}
+                </mat-option>
+              </mat-autocomplete>
+            </mat-form-field>
+          </div>
+
+          <div class="btn-container">
+            <button mat-raised-button color="warn" (click)="clearSelections()">Limpar</button>
+            <button mat-raised-button color="primary" (click)="saveSelections()">Ok</button>
+          </div>
         </div>
+      </div>
+
+      <div class="credits">
+        <button mat-button color="primary" (click)="openCreditsDialog()">Abrir os creditos</button>
       </div>
     </div>
   </main>

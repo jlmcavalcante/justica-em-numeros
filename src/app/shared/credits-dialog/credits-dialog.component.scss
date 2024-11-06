@@ -1,0 +1,57 @@
+.custom-dialog-container {
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Impede a exibição de barras de rolagem */
+}
+
+#creditos-container {
+  height: 90%;
+  overflow: hidden; /* Impede barras de rolagem */
+  position: relative;
+}
+
+#creditos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 0;
+  animation: scroll 20s linear infinite; /* Ajusta a duração da animação */
+  text-align: center; /* Centraliza o texto horizontalmente */
+  transform: translateY(0); /* Faz o texto aparecer imediatamente */
+}
+
+@keyframes scroll {
+  from {
+    transform: translateY(0); /* Começa na posição visível */
+  }
+  to {
+    transform: translateY(-100%); /* Termina na parte superior fora da visualização */
+  }
+}
+
+ul {
+  list-style-type: none; /* Remove os marcadores de lista para centralização mais limpa */
+  padding: 0;
+  margin: 8px 0;
+  text-align: center; /* Centraliza os itens da lista */
+}
+
+li {
+  margin: 6px 0;
+}
+
+h2 {
+  margin: 0 0 12px 0;
+  font-size: 1.5rem;
+  text-align: center;
+}
