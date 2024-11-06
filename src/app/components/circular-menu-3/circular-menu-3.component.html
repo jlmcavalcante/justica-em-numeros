@@ -54,10 +54,11 @@
         <h2>{{ currentTitle }}</h2>
         <p>{{ currentText }}</p>
       </div>
+
       <div class="lower-container">
-        <h2>Nome do Container</h2>
-        <div class="buttons-container">
-          <mat-form-field>
+        <h2>Filtragem</h2>
+        <div class="select-container">
+          <mat-form-field appearance="outline">
             <mat-label>Escolha a Instância</mat-label>
             <mat-select [(value)]="selectedInstancia" (selectionChange)="onInstanciaChange($event.value)">
               <mat-option [value]="null">-</mat-option>
@@ -68,7 +69,7 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Orgão Julgador {{filteredOrgaos.length}}</mat-label>
             <input type="text" matInput [matAutocomplete]="auto" [(ngModel)]="selectedOrgao" (input)="filterOrgaos()">
             <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onOrgaoChange($event.option.value)">
