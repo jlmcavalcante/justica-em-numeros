@@ -1,11 +1,11 @@
 /* Dispositivos móveis pequenos (smartphones) */
 @media (max-width: 480px) {
-
 }
 
 /* Tablets em modo retrato e smartphones maiores */
 @media (max-width: 810px) {
-  #menu, #border {
+  #menu,
+  #border {
     transform: scale(0.7) !important;
   }
 
@@ -18,7 +18,6 @@
   }
 
   .upper-container {
-
     p {
       line-height: 1.8;
       font-size: 1.5vw !important;
@@ -27,7 +26,6 @@
   }
 
   .lower-container {
-
     .btn-icon-wrapper {
       mat-icon {
         width: 3.5vw !important;
@@ -46,13 +44,14 @@
   }
 
   .footer {
-    font-size: .7rem;
+    font-size: 0.7rem;
   }
 }
 
 /* Monitores desktop padrão */
 @media (max-width: 1200px) {
-  #menu, #border {
+  #menu,
+  #border {
     transform: scale(0.8);
   }
 
@@ -66,14 +65,191 @@
 
   .left-column {
     flex: 1;
-
   }
 
   .right-column {
     flex: 2;
 
-    .upper-container, .lower-container {
+    .upper-container,
+    .lower-container {
       width: 100% !important;
     }
+  }
+}
+
+/* Dispositivos móveis em modo paisagem */
+@media only screen and (max-height: 480px) and (orientation: landscape) {
+  .header {
+    height: 3rem;
+
+    .logo {
+      max-height: 2rem;
+    }
+  }
+  #menu,
+  #border {
+    transform: scale(0.5);
+  }
+
+  .main-content {
+    height: calc(100% - 6rem);
+    width: 100vw;
+
+    .left-column {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .right-column {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+
+      .upper-container,
+      .lower-container {
+        background-color: #fafafa;
+        border-radius: 1rem;
+        padding: 2rem;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        text-align: justify;
+        width: 80%;
+
+        h2 {
+          color: #357abd;
+          font-weight: 600;
+        }
+
+        .buttons-container {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          gap: 1rem;
+          width: 100%;
+
+          a {
+            flex: 1 1 100%;
+            height: auto;
+            background-color: #357abd;
+            border-radius: 0.4rem;
+            text-decoration: none;
+            padding: 0.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+            &:hover {
+              transform: translateY(-2px);
+              box-shadow: 0 5px 10px rgba(56, 56, 56, 0.3);
+            }
+
+            &:active {
+              transform: translateY(0);
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+            .btn-icon-wrapper {
+              flex: 1;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              mat-icon {
+                color: #ffffff;
+                width: 1.7vw;
+                height: auto;
+                font-size: 1.7vw;
+              }
+            }
+
+            .btn-name-wrapper {
+              flex: 5;
+              display: flex;
+              align-items: center;
+              overflow: hidden;
+
+              span {
+                color: #fafafa;
+                font-weight: 600;
+                font-size: 0.75vw;
+                text-align: left !important;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+              }
+            }
+          }
+        }
+      }
+
+      .upper-container {
+        overflow: scroll;
+        flex: 4;
+
+        h2 {
+          font-size: 2.5vh;
+          margin-bottom: 1.5vh;
+        }
+
+        p {
+          line-height: 1.5;
+          font-size: 0.85vw;
+          text-align: justify;
+        }
+      }
+
+      .lower-container {
+        flex: 1;
+
+        h2 {
+          font-size: 2.5vh;
+          margin-bottom: 2.5vh;
+          font-weight: 500;
+        }
+
+        .filter-container {
+          display: flex;
+          flex-direction: column;
+          .select-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            width: 100%;
+
+            mat-form-field {
+              transform: scale(0.8);
+              flex: 4;
+            }
+          }
+
+          .btn-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 1rem;
+
+            button {
+              width: 6vw;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    height: 3rem;
+    font-size: 0.6rem;
   }
 }

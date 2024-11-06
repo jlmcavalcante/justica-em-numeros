@@ -59,7 +59,7 @@
         <h2>Filtragem</h2>
         <div class="filter-container">
           <div class="select-container">
-            <mat-form-field appearance="outline">
+            <mat-form-field class="form-1" appearance="outline">
               <mat-label>Instância</mat-label>
               <mat-select [(value)]="selectedInstancia" (selectionChange)="onInstanciaChange($event.value)">
                 <mat-option [value]="null">*</mat-option>
@@ -69,7 +69,7 @@
               </mat-select>
             </mat-form-field>
 
-            <mat-form-field appearance="outline">
+            <mat-form-field class="form-2" appearance="outline">
               <mat-label>Orgão Julgador ({{filteredOrgaos.length}})</mat-label>
               <input type="text" matInput [matAutocomplete]="auto" [(ngModel)]="selectedOrgao" (input)="filterOrgaos()">
               <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onOrgaoChange($event.option.value)">
@@ -81,8 +81,8 @@
           </div>
 
           <div class="btn-container">
-            <button mat-raised-button color="warn" (click)="clearSelections()">Limpar</button>
-            <button mat-raised-button color="primary" (click)="saveSelections()">Ok</button>
+            <button mat-flat-button color="warn" (click)="clearSelections()"> ✘ </button>
+            <button mat-flat-button color="primary" (click)="saveSelections()"> ✔ </button>
           </div>
         </div>
       </div>
