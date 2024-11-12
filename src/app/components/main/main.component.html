@@ -95,9 +95,13 @@
             </mat-form-field>
           </div>
 
-          <div class="btn-container">
-            <button mat-flat-button color="warn" (click)="clearSelections()"> ✘ </button>
-            <button mat-flat-button color="primary" (click)="saveSelections()"> ✔ </button>
+          <div class="button-container">
+            <button mat-button (click)="clearSelections()">
+              <mat-icon>delete</mat-icon>
+            </button>
+            <button mat-button (click)="saveSelections()">
+              <mat-icon>save</mat-icon>
+            </button>
           </div>
         </div>
       </div>

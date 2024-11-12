@@ -42,7 +42,7 @@
     align-items: center;
 
     #menu {
-      transform: rotate(30deg);
+      transform: rotate(210deg);
       z-index: 10;
       background: #ffffff;
       position: relative;
@@ -58,14 +58,14 @@
         justify-content: center;
         position: absolute;
         left: 160px;
-        top: 250px;
+        top: 260px;
         width: 18rem;
         height: 6rem;
         z-index: 10;
         background: #ffffff;
         background: linear-gradient(top, #eee, #aaa);
         border-radius: 1rem;
-        transform: rotate(-30deg);
+        transform: rotate(-210deg);
 
         img {
           width: 16rem;
@@ -95,7 +95,7 @@
         .content {
           left: 300px;
           top: 60px;
-          transform: rotate(-30deg);
+          transform: rotate(-210deg);
         }
       }
 
@@ -113,7 +113,7 @@
         .content {
           left: 300px;
           top: 400px;
-          transform: rotate(-30deg);
+          transform: rotate(-210deg);
         }
       }
 
@@ -121,7 +121,7 @@
         .content {
           left: 5px;
           top: 230px;
-          transform: rotate(-30deg);
+          transform: rotate(-210deg);
         }
       }
 
@@ -141,7 +141,6 @@
           width: 2.5vw;
           height: auto;
           font-size: 2.5vw;
-          margin-bottom: 0.5rem;
         }
 
         span {
@@ -169,6 +168,8 @@
         transform: rotate(120deg) skew(30deg);
         -moz-transform: rotate(120deg) skew(30deg);
         -webkit-transform: rotate(120deg) skew(30deg);
+
+        border-right: 2px solid #ffffff;
       }
       .item3 {
         background-color: #357abd;
@@ -184,6 +185,7 @@
         transform: rotate(240deg) skew(30deg);
         -moz-transform: rotate(240deg) skew(30deg);
         -webkit-transform: rotate(240deg) skew(30deg);
+        border-right: 1px solid #ffffff;
 
         // Remover linhas de divisão entre items de uma mesma seção.
         box-sizing: content-box;
@@ -195,7 +197,6 @@
         transform: rotate(300deg) skew(30deg);
         -moz-transform: rotate(300deg) skew(30deg);
         -webkit-transform: rotate(300deg) skew(30deg);
-        border-bottom: 2px solid #fff;
       }
       .item6 {
         background-color: #357abd;
@@ -272,7 +273,8 @@
       .filter-container {
         display: flex;
         flex-direction: row;
-        gap: .5rem;
+        gap: 0.5rem;
+        align-items: center;
 
         .select-container {
           display: flex;
@@ -281,6 +283,10 @@
           justify-content: center;
           gap: .5rem;
           width: 80%;
+
+          ::ng-deep .mat-mdc-form-field-bottom-align {
+            height: 0 !important;
+          }
 
           .form-1 {
             flex: 1;
@@ -291,16 +297,37 @@
           }
         }
 
-        .btn-container {
+        .button-container {
           display: flex;
           flex-direction: row;
           align-items: center;
-          justify-content: flex-end;
-          gap: .5rem;
+          gap: 0.5rem;
 
           button {
-            width: fit-content;
-            font-weight: 900;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            border: 1px solid #aaaaaa;
+            cursor: pointer;
+            transition: color 0.2s ease;
+
+            mat-icon {
+              padding: 0 !important;
+              margin: 0 !important;
+              width: 1.2rem;
+              height: 1.2rem;
+              font-size: 1.2rem;
+              color: #aaaaaa;
+            }
+          }
+
+          button:hover {
+            color: #000; /* Realce sutil ao passar o mouse */
+          }
+
+          button:focus {
+            outline: none;
           }
         }
       }
