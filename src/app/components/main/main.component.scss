@@ -14,17 +14,41 @@
   justify-content: space-between;
   align-items: center;
   background-color: #184364;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   height: 4.5rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 
-  .logo {
-    width: auto;
-    max-height: 3rem;
+  .main-logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+
+    img {
+      max-height: 4rem;
+      height: auto;
+    }
+
+    .main-logo-text {
+      display: flex;
+      flex-direction: column;
+      color: #ffffff;
+
+      .text-1 {
+        font-weight: 700;
+        font-size: 2vh;
+      }
+      .text-2 {
+        font-size: 1.5vh;
+      }
+    }
   }
 
-  .white-img {
-    filter: brightness(100000%);
+  .page-name {
+    font-size: 2vh;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
   }
 }
 

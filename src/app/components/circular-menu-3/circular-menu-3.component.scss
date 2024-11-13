@@ -14,17 +14,41 @@
   justify-content: space-between;
   align-items: center;
   background-color: #184364;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   height: 4.5rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 
-  .logo {
-    width: auto;
-    max-height: 3rem;
+  .main-logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+
+    img {
+      max-height: 4rem;
+      height: auto;
+    }
+
+    .main-logo-text {
+      display: flex;
+      flex-direction: column;
+      color: #ffffff;
+
+      .text-1 {
+        font-weight: 700;
+        font-size: 2vh;
+      }
+      .text-2 {
+        font-size: 1.5vh;
+      }
+    }
   }
 
-  .white-img {
-    filter: brightness(100000%);
+  .page-name {
+    font-size: 2vh;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
   }
 }
 
@@ -57,8 +81,8 @@
         align-items: center;
         justify-content: center;
         position: absolute;
-        left: 160px;
-        top: 260px;
+        left: 165px;
+        top: 265px;
         width: 18rem;
         height: 6rem;
         z-index: 10;
@@ -91,10 +115,11 @@
         z-index: 1;
       }
 
+      // Conteúdo de Metas e indicadores.
       .sec1 {
         .content {
           left: 300px;
-          top: 60px;
+          top: 100px;
           transform: rotate(-210deg);
         }
       }
@@ -109,6 +134,7 @@
         cursor: pointer;
       }
 
+      // Conteúdo de Gestão Processual.
       .sec2 {
         .content {
           left: 300px;
@@ -117,10 +143,11 @@
         }
       }
 
+      // Conteúdo de Gestão de Pessoas.
       .sec3 {
         .content {
-          left: 5px;
-          top: 230px;
+          left: 40px;
+          top: 250px;
           transform: rotate(-210deg);
         }
       }
@@ -141,12 +168,15 @@
           width: 2.5vw;
           height: auto;
           font-size: 2.5vw;
+          margin: 0 !important;
         }
 
         span {
           color: #fff;
           font-size: larger;
           font-weight: 600;
+          line-height: 1.5rem;
+          letter-spacing: .1rem;
         }
       }
 
