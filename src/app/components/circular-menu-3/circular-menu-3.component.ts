@@ -42,9 +42,9 @@ interface ItemText {
 })
 export class CircularMenu3Component implements OnInit {
   isSmallScreen: boolean = false;
-  currentTitle: string = 'Justiça em números';
+  currentTitle: string = 'O que é o UNIDATA?';
   currentText: string =
-    'Desde 2004, o Relatório Justiça em Números é a principal fonte das estatísticas oficiais do Poder Judiciário, publicado anualmente, e revela a realidade dos tribunais brasileiros com profundidade, oferecendo um panorama detalhado sobre a estrutura, litigiosidade e indicadores essenciais para apoiar a Gestão Judiciária; a partir de 2022, passou a utilizar a Base Nacional de Dados do Poder Judiciário – DataJud, fonte primária para o Sistema de Estatística do Poder Judiciário – SIESPJ, o que trouxe mais transparência, aprimoramento na qualidade da informação, além de maior eficiência e racionalidade na coleta de dados processuais nos tribunais.';
+    'O Projeto UNIDATA é uma iniciativa estratégica que visa centralizar as informações gerenciais do TJPI e estabelecer governança sobre os dados, consolidando-se como a fonte oficial de estatísticas e informações essenciais para a tomada de decisões. Desenvolvido para solucionar problemas de dispersão e inconsistência de dados, o UNIDATA fornecerá uma visão única e confiável por meio de dashboards intuitivos voltados à administração e às unidades judiciais. Resultado de uma parceria entre o Laboratório de Inovação - OpalaLab, a Secretaria de Gestão Estratégica - SEGES e a Secretaria de Tecnologia da Informação e Comunicação - STIC, o projeto visa não apenas aprimorar a eficiência operacional, mas também fortalecer uma cultura de decisões baseadas em dados.';
   itemDescriptions: ItemText[] = menuJudicialData;
   orgaos: OrgaoJulgador[] = [];
   uniqueInstancias: string[] = [];
@@ -93,9 +93,9 @@ export class CircularMenu3Component implements OnInit {
   }
 
   resetText() {
-    this.currentTitle = 'Justiça em números';
+    this.currentTitle = 'O que é o UNIDATA?';
     this.currentText =
-      'Desde 2004, o Relatório Justiça em Números é a principal fonte das estatísticas oficiais do Poder Judiciário, publicado anualmente, e revela a realidade dos tribunais brasileiros com profundidade, oferecendo um panorama detalhado sobre a estrutura, litigiosidade e indicadores essenciais para apoiar a Gestão Judiciária; a partir de 2022, passou a utilizar a Base Nacional de Dados do Poder Judiciário – DataJud, fonte primária para o Sistema de Estatística do Poder Judiciário – SIESPJ, o que trouxe mais transparência, aprimoramento na qualidade da informação, além de maior eficiência e racionalidade na coleta de dados processuais nos tribunais.';
+      'O Projeto UNIDATA é uma iniciativa estratégica que visa centralizar as informações gerenciais do TJPI e estabelecer governança sobre os dados, consolidando-se como a fonte oficial de estatísticas e informações essenciais para a tomada de decisões. Desenvolvido para solucionar problemas de dispersão e inconsistência de dados, o UNIDATA fornecerá uma visão única e confiável por meio de dashboards intuitivos voltados à administração e às unidades judiciais. Resultado de uma parceria entre o Laboratório de Inovação - OpalaLab, a Secretaria de Gestão Estratégica - SEGES e a Secretaria de Tecnologia da Informação e Comunicação - STIC, o projeto visa não apenas aprimorar a eficiência operacional, mas também fortalecer uma cultura de decisões baseadas em dados.';
   }
 
   private extractUniqueInstancias(): void {

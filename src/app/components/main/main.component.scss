@@ -55,17 +55,19 @@
         align-items: center;
         justify-content: center;
         position: absolute;
-        left: 160px;
+        left: 155px;
         top: 240px;
         width: 18rem;
         height: 7rem;
         z-index: 10;
-        background: #ffffff;
-        background: linear-gradient(top, #eee, #aaa);
+        background: #184364;
         border-radius: 1rem;
+        border: .2rem solid #ffffff;
 
         img {
-          width: 16rem;
+          width: auto;
+          max-height: 3.5rem;
+          filter: brightness(100000%);
         }
       }
 
@@ -94,6 +96,7 @@
 
         .content {
           position: absolute;
+          z-index: 2;
           width: 40%;
           height: 80%;
           display: flex;
@@ -106,42 +109,42 @@
 
       // Item styles
       .item1 {
-        background-color: #4a90e2;
+        background-color: #184364;
         z-index: 1;
         transform: rotate(45deg);
       }
       .item2 {
-        background-color: #357abd;
+        background-color: #205c8a;
         z-index: 2;
         transform: rotate(90deg);
       }
       .item3 {
-        background-color: #4a90e2;
+        background-color: #184364;
         z-index: 3;
         transform: rotate(135deg);
       }
       .item4 {
-        background-color: #357abd;
+        background-color: #205c8a;
         z-index: 4;
         transform: rotate(180deg);
       }
       .item5 {
-        background-color: #4a90e2;
+        background-color: #184364;
         z-index: 5;
         transform: rotate(225deg);
       }
       .item6 {
-        background-color: #357abd;
+        background-color: #205c8a;
         z-index: 6;
         transform: rotate(270deg);
       }
       .item7 {
-        background-color: #4a90e2;
+        background-color: #184364;
         z-index: 7;
         transform: rotate(315deg);
       }
       .item8 {
-        background-color: #357abd;
+        background-color: #205c8a;
         z-index: 8;
         transform: rotate(-44deg);
       }
@@ -226,7 +229,7 @@
       width: 80%;
 
       h2 {
-        color: #357abd;
+        color: #184364;
         font-weight: 600;
       }
 
@@ -360,7 +363,7 @@
             align-items: center;
             justify-content: center;
             background-color: transparent;
-            border: 1px solid #aaaaaa;
+            border: .12rem solid #949494;
             cursor: pointer;
             transition: color 0.2s ease;
 
@@ -368,7 +371,7 @@
               padding: 0 !important;
               margin: 0 !important;
 
-              color: #aaaaaa;
+              color: #949494;
             }
           }
 
