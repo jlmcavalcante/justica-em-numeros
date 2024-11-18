@@ -42,6 +42,7 @@ interface ItemText {
 })
 export class CircularMenu3Component implements OnInit {
   isSmallScreen: boolean = false;
+  isLandScape: boolean = false;
   currentTitle: string = 'O que é o UNIDATA?';
   currentText: string =
     'O Projeto UNIDATA é uma iniciativa estratégica que visa centralizar as informações gerenciais do TJPI e estabelecer governança sobre os dados, consolidando-se como a fonte oficial de estatísticas e informações essenciais para a tomada de decisões. Desenvolvido para solucionar problemas de dispersão e inconsistência de dados, o UNIDATA fornecerá uma visão única e confiável por meio de dashboards intuitivos voltados à administração e às unidades judiciais. Resultado de uma parceria entre o Laboratório de Inovação - OpalaLab, a Secretaria de Gestão Estratégica - SEGES e a Secretaria de Tecnologia da Informação e Comunicação - STIC, o projeto visa não apenas aprimorar a eficiência operacional, mas também fortalecer uma cultura de decisões baseadas em dados.';
@@ -85,8 +86,8 @@ export class CircularMenu3Component implements OnInit {
 
   private checkScreenSize(): void {
     this.isSmallScreen = window.innerWidth < 768;
+    this.isLandScape = window.innerHeight < 400;
   }
-
   changeText(index: number) {
     this.currentTitle = this.itemDescriptions[index].title;
     this.currentText = this.itemDescriptions[index].description;

@@ -66,7 +66,7 @@
     align-items: center;
 
     #menu {
-      transform: rotate(210deg);
+      transform: rotate(210deg) !important;
       z-index: 10;
       background: #ffffff;
       position: relative;
@@ -434,5 +434,6 @@ mat-icon {
   background: #ffffff !important;
 }
 
+@import "../../styles/responsive-landscape-menu3.component.scss";
 @import "../../styles/responsive.component.scss";
 @import "../../styles/small-screen.component.scss";

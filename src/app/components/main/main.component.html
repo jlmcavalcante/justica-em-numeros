@@ -79,7 +79,7 @@
         <p>{{ currentText }}</p>
       </div>
 
-      <div class="lower-container">
+      <div class="lower-container" *ngIf="!isLandScape">
         <h2>Filtragem</h2>
         <div class="filter-container">
           <div class="select-container">
@@ -115,7 +115,7 @@
         </div>
       </div>
 
-      <div class="credits">
+      <div class="credits" *ngIf="!isLandScape">
         <button mat-button color="primary" (click)="openCreditsDialog()">Equipe de Colaboração</button>
       </div>
     </div>
