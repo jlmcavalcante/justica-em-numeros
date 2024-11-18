@@ -4,6 +4,49 @@
 
 /* Tablets em modo retrato e smartphones maiores */
 @media (max-width: 810px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #184364;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+    .main-logo-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+
+      img {
+        max-height: 3rem;
+        height: auto;
+      }
+
+      .main-logo-text {
+        display: flex;
+        flex-direction: column;
+        color: #ffffff;
+
+        .text-1 {
+          font-weight: 700;
+          font-size: 3vw;
+        }
+        .text-2 {
+          font-size: 2.2vw;
+        }
+      }
+    }
+
+    .page-name {
+      font-size: 3vw;
+      color: #ffffff;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+
+
   #menu,
   #border {
     transform: scale(0.7) !important;
