@@ -86,7 +86,7 @@ export class CircularMenu3Component implements OnInit {
 
   private checkScreenSize(): void {
     this.isSmallScreen = window.innerWidth < 768;
-    this.isLandScape = window.innerHeight < 400;
+    this.isLandScape = window.innerHeight < 450;
   }
   changeText(index: number) {
     this.currentTitle = this.itemDescriptions[index].title;
