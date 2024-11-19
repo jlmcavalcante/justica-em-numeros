@@ -1,0 +1,92 @@
+<div class="page">
+  <header class="header">
+    <div class="main-logo-container">
+      <img src="../../../assets/logos/tjpi.png" alt="Logo Unidata" class="logo">
+      <div class="main-logo-text">
+        <span class="text-1">Tribunal de Justiça do Piauí</span>
+        <span class="text-2">Poder Judiciário do Estado do Piauí</span>
+      </div>
+    </div>
+
+    <span class="page-name">
+      Administrativo
+    </span>
+  </header>
+
+  <main class="main-content" *ngIf="!isSmallScreen">
+    <div class="left-column">
+      <div id="menu">
+        <div class="item1 item" (mouseenter)="changeText(0)" (mouseleave)="resetText()">
+          <div class="content">
+            <mat-icon>group</mat-icon>
+            <span>Estrutura de Pessoal</span>
+          </div>
+        </div>
+        <div class="item2 item" (mouseenter)="changeText(1)" (mouseleave)="resetText()">
+          <div class="content">
+            <mat-icon>trending_up</mat-icon>
+            <span>Produtividade</span>
+          </div>
+        </div>
+        <div class="item3 item" (mouseenter)="changeText(2)" (mouseleave)="resetText()">
+          <div class="content">
+            <mat-icon>grade</mat-icon>
+            <span>Prêmios de Qualidade</span>
+          </div>
+        </div>
+        <div class="item4 item" (mouseenter)="changeText(3)" (mouseleave)="resetText()">
+          <div class="content">
+            <mat-icon>attach_money</mat-icon>
+            <span>Orçamentos</span>
+          </div>
+        </div>
+        <div class="item5 item" (mouseenter)="changeText(4)" (mouseleave)="resetText()">
+          <div class="content">
+            <mat-icon>account_balance</mat-icon>
+            <span>Patrimônio</span>
+          </div>
+        </div>
+        <div class="item6 item" (mouseenter)="changeText(5)" (mouseleave)="resetText()">
+          <div class="content">
+            <mat-icon>assignment</mat-icon>
+            <span>Plano de Gestão</span>
+          </div>
+        </div>
+        <div class="item7 item" (mouseenter)="changeText(6)" (mouseleave)="resetText()">
+          <div class="content">
+            <mat-icon>gavel</mat-icon>
+            <span>Contratos e Licitações</span>
+          </div>
+        </div>
+        <div id="wrapper8">
+          <div class="item8 item" (mouseenter)="changeText(7)" (mouseleave)="resetText()">
+            <div class="content">
+              <mat-icon>build</mat-icon>
+              <span>Obras</span>
+            </div>
+          </div>
+        </div>
+        <div id="center">
+          <img src="../../../assets/logos/unidata-novo.jpeg" alt="Logo Unidata" class="logo">
+        </div>
+      </div>
+      <div id="border"></div>
+    </div>
+
+    <div class="right-column">
+      <div class="upper-container">
+        <h2>{{ currentTitle }}</h2>
+        <p>{{ currentText }}</p>
+      </div>
+
+      <div class="lower-container" *ngIf="!isLandScape">
+        <h2>Filtragem</h2>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024, Tribunal de Justiça do Piauí - Todos os direitos reservados.</p>
+    <p>Desenvolvido pelo Laboratório de Inovação do TJPI</p>
+  </footer>
+</div>

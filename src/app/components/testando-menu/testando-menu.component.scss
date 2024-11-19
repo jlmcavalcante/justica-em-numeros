@@ -68,9 +68,9 @@
     #menu {
       background: #aaa;
       position: relative;
-      width: 600px;
+      width: 60vh;
+      height: 60vh;
       max-width: 600px;
-      height: 600px;
       max-height: 600px;
       margin: 0 auto;
       overflow: hidden;
@@ -81,10 +81,12 @@
         align-items: center;
         justify-content: center;
         position: absolute;
-        left: 160px;
-        top: 240px;
-        width: 18rem;
-        height: 7rem;
+        left: 25%;
+        top: 42%;
+        width: 15vw;
+        height: 10vh;
+        max-width: 18rem;
+        max-height: 7rem;
         z-index: 10;
         background: #ffffff;
         background: linear-gradient(top, #eee, #aaa);
@@ -98,9 +100,9 @@
       .item {
         overflow: hidden;
         position: absolute;
-        width: 300px;
+        width: 30vh;
+        height: 30vh;
         max-width: 300px;
-        height: 300px;
         max-height: 300px;
         transform-origin: 100% 100%;
         color: #fff;
@@ -122,13 +124,15 @@
 
         .content {
           position: absolute;
-          width: 40%;
-          height: 80%;
+          width: 8vw;
+          height: 10vh;
           display: flex;
           justify-content: center;
           align-items: center;
           flex-direction: column;
           text-align: center;
+
+          border: 1px solid red;
         }
       }
 
@@ -176,8 +180,8 @@
 
       // Content positioning for items
       .item1 .content {
-        left: 40px;
-        top: 95px;
+        left: 50%;
+        top: 75%;
         transform: rotate(-45deg);
       }
       .item2 .content {
@@ -226,8 +230,10 @@
     }
 
     #border {
-      width: 610px;
-      height: 610px;
+      width: 62vh;
+      height: 62vh;
+      max-width: 610px;
+      max-height: 610px;
       position: absolute;
       z-index: 0;
       background-color: #ffffff;
