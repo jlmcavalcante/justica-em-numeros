@@ -9,80 +9,107 @@
     </div>
 
     <span class="page-name">
-      Administrativo
+      Página de Teste
     </span>
   </header>
 
-  <main class="main-content" *ngIf="!isSmallScreen">
-    <div class="left-column">
-      <div id="menu">
-        <div class="item1 item" (mouseenter)="changeText(0)" (mouseleave)="resetText()">
-          <div class="content">
-            <mat-icon>group</mat-icon>
-            <span>Estrutura de Pessoal</span>
-          </div>
-        </div>
-        <div class="item2 item" (mouseenter)="changeText(1)" (mouseleave)="resetText()">
-          <div class="content">
-            <mat-icon>trending_up</mat-icon>
-            <span>Produtividade</span>
-          </div>
-        </div>
-        <div class="item3 item" (mouseenter)="changeText(2)" (mouseleave)="resetText()">
-          <div class="content">
-            <mat-icon>grade</mat-icon>
-            <span>Prêmios de Qualidade</span>
-          </div>
-        </div>
-        <div class="item4 item" (mouseenter)="changeText(3)" (mouseleave)="resetText()">
-          <div class="content">
-            <mat-icon>attach_money</mat-icon>
-            <span>Orçamentos</span>
-          </div>
-        </div>
-        <div class="item5 item" (mouseenter)="changeText(4)" (mouseleave)="resetText()">
-          <div class="content">
-            <mat-icon>account_balance</mat-icon>
-            <span>Patrimônio</span>
-          </div>
-        </div>
-        <div class="item6 item" (mouseenter)="changeText(5)" (mouseleave)="resetText()">
-          <div class="content">
-            <mat-icon>assignment</mat-icon>
-            <span>Plano de Gestão</span>
-          </div>
-        </div>
-        <div class="item7 item" (mouseenter)="changeText(6)" (mouseleave)="resetText()">
-          <div class="content">
-            <mat-icon>gavel</mat-icon>
-            <span>Contratos e Licitações</span>
-          </div>
-        </div>
-        <div id="wrapper8">
-          <div class="item8 item" (mouseenter)="changeText(7)" (mouseleave)="resetText()">
-            <div class="content">
-              <mat-icon>build</mat-icon>
-              <span>Obras</span>
+  <main>
+    <section class="center">
+      <div class="menu">
+        <a href="#">
+          <div class="item"></div>
+          <div class="option">
+            <span class="material-symbols-outlined">
+              home
+            </span>
+            <div class="name">
+              Home 1
             </div>
           </div>
-        </div>
-        <div id="center">
-          <img src="../../../assets/logos/unidata-novo.jpeg" alt="Logo Unidata" class="logo">
-        </div>
+        </a>
+        <a href="#">
+          <div class="item"></div>
+          <div class="option">
+            <span class="material-symbols-outlined">
+              home
+            </span>
+            <div class="name">
+              Home 2
+            </div>
+          </div>
+        </a>
+        <a href="#">
+          <div class="item"></div>
+          <div class="option">
+            <span class="material-symbols-outlined">
+              home
+            </span>
+            <div class="name">
+              Home 3
+            </div>
+          </div>
+        </a>
+        <a href="#">
+          <div class="item"></div>
+          <div class="option">
+            <span class="material-symbols-outlined">
+              home
+            </span>
+            <div class="name">
+              Home 4
+            </div>
+          </div>
+        </a>
+        <a href="#">
+          <div class="item"></div>
+          <div class="option">
+            <span class="material-symbols-outlined">
+              home
+            </span>
+            <div class="name">
+              Home 5
+            </div>
+          </div>
+        </a>
+        <a href="#">
+          <div class="item"></div>
+          <div class="option">
+            <span class="material-symbols-outlined">
+              home
+            </span>
+            <div class="name">
+              Home 6
+            </div>
+          </div>
+        </a>
+        <a href="#">
+          <div class="item"></div>
+          <div class="option">
+            <span class="material-symbols-outlined">
+              home
+            </span>
+            <div class="name">
+              Home 7
+            </div>
+          </div>
+        </a>
+        <a href="#">
+          <div class="item"></div>
+          <div class="option">
+            <span class="material-symbols-outlined">
+              home
+            </span>
+            <div class="name">
+              Home 8
+            </div>
+          </div>
+        </a>
       </div>
-      <div id="border"></div>
-    </div>
+    </section>
 
-    <div class="right-column">
-      <div class="upper-container">
-        <h2>{{ currentTitle }}</h2>
-        <p>{{ currentText }}</p>
-      </div>
+    <section class="center">
 
-      <div class="lower-container" *ngIf="!isLandScape">
-        <h2>Filtragem</h2>
-      </div>
-    </div>
+    </section>
   </main>
 
   <footer class="footer">
