@@ -60,13 +60,15 @@ main {
   flex-direction: row;
 
   .menu {
-    width: 420px;
-    height: 420px;
+    width: 80%;
+    max-width: 750px;
+    height: auto;
+    aspect-ratio: 1 / 1;
     position: relative;
     background: #357abd;
     border-radius: 50%;
-    border: .2rem solid rgb(255, 255, 255);
-    // overflow: hidden;
+    border: .25rem solid rgb(255, 255, 255);
+    overflow: hidden;
   }
   .menu a {
     position: absolute;
@@ -79,78 +81,102 @@ main {
 
   .menu a .item {
     // width of item = height of item = margim = width of the menu/2
-    width: 210px;
-    height: 210px;
-    border: 1px solid #ff0000;
-    margin-top: -210px;
-    transform: rotate(0deg) skew(-45deg);
+    width: 20vw;
+    height: 20vw;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: -20vw;
+    // [rectangle] 90º + skew(x) = 360/(nºitens)
+    transform: rotate(-45deg) skew(-45deg);
     transform-origin: 0 100%;
   }
 
+  // Increment angle = 360/(nºitens)
   .menu a:nth-child(2) .item {
-    transform: rotate(45deg) skew(-45deg);
-    border: 1px solid #00ff15;
+    transform: rotate(0deg) skew(-45deg);
   }
   .menu a:nth-child(3) .item {
-    transform: rotate(90deg) skew(-45deg);
+    transform: rotate(45deg) skew(-45deg);
   }
   .menu a:nth-child(4) .item {
-    transform: rotate(135deg) skew(-45deg);
+    transform: rotate(90deg) skew(-45deg);
   }
   .menu a:nth-child(5) .item {
-    transform: rotate(180deg) skew(-45deg);
+    transform: rotate(135deg) skew(-45deg);
   }
   .menu a:nth-child(6) .item {
-    transform: rotate(225deg) skew(-45deg);
+    transform: rotate(180deg) skew(-45deg);
   }
   .menu a:nth-child(7) .item {
-    transform: rotate(270deg) skew(-45deg);
+    transform: rotate(225deg) skew(-45deg);
   }
   .menu a:nth-child(8) .item {
-    transform: rotate(315deg) skew(-45deg);
-    border: 1px solid #00ff15;
+    transform: rotate(270deg) skew(-45deg);
   }
 
   .menu a .option {
     position: absolute;
-    width: 100px;
-    height: 60px;
-    text-align: center;
-    top: calc(50% - 30px);
-    left: calc(50% - 50px);
-    transform: rotateZ(67.5deg) translateY(-140px) rotateZ(-67.5deg);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 6vw;
+    height: auto;
+    aspect-ratio: 5 / 3;
+    // Posiciona o ícone no centro do menu.
+    top: calc(50% - 2vw);
+    left: calc(50% - 3vw);
+    // Direciona e move o ícone para o setor correspondentes.
+    transform: rotateZ(22.5deg) translateY(-14vw) rotateZ(-22.5deg);
     text-decoration: none;
     font-family: "Poppins", sans-serif;
-    font-size: 1rem;
     font-weight: 500;
     color: #ffffff;
-    line-height: 1.2rem;
     z-index: 1;
   }
 
-  .menu a .option span {
-    font-size: 2rem;
+  .menu a .option mat-icon {
+    width: 2.5vw;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    font-size: 2.5vw;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .menu a .option .name {
+    font-size: 1vw;
   }
 
   .menu a:nth-child(2) .option {
-    transform: rotateZ(112.5deg) translateY(-140px) rotateZ(-112.5deg);
-    color: #ff0000;
+    transform: rotateZ(67.5deg) translateY(-14vw) rotateZ(-67.5deg);
   }
   .menu a:nth-child(3) .option {
+    transform: rotateZ(112.5deg) translateY(-14vw) rotateZ(-112.5deg);
   }
   .menu a:nth-child(4) .option {
+    transform: rotateZ(157.5deg) translateY(-14vw) rotateZ(-157.5deg);
   }
   .menu a:nth-child(5) .option {
+    transform: rotateZ(202.5deg) translateY(-14vw) rotateZ(-202.5deg);
   }
   .menu a:nth-child(6) .option {
+    transform: rotateZ(247.5deg) translateY(-14vw) rotateZ(-247.5deg);
   }
   .menu a:nth-child(7) .option {
+    transform: rotateZ(292.5deg) translateY(-14vw) rotateZ(-292.5deg);
   }
   .menu a:nth-child(8) .option {
+    transform: rotateZ(337.5deg) translateY(-14vw) rotateZ(-337.5deg);
   }
 
   .menu a:hover .item {
     background: white;
+  }
+
+  .menu a:hover .option {
+    color: #357abd !important;
+  }
+  .menu a:hover .option mat-icon {
+    color: #357abd !important;
+
   }
 
   // .menu::before {
@@ -173,6 +199,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .footer {
